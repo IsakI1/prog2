@@ -44,9 +44,4 @@ class Person(object):
 		if n <= 1:
 			return n
 		else:
-<<<<<<< HEAD
 			return self.fib_numba(n - 1) + self.fib_numba(n - 2)
-=======
-			return self.fib_py(n-1) + self.fib_py(n-2)
-
->>>>>>> f7328c3a8ad535afa300e54daa9865ed37d27bce
