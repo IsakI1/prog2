@@ -38,10 +38,11 @@ class Person(object):
 			return self.fib_py(n-1) + self.fib_py(n-2)
 		
 	@njit
-	def fib_numba(self,f):
-		n = self.getAge()
+	def fib_numba(self, n=None):
+		if n is None:
+			n = Person.getAge()
 		if n <= 1:
 			return n
 		else:
-			return self.fib_numba(n-1) + self.fib_numba(n-2)
+			return Person.fib_numba(n-1) + Person.fib_numba(n-2)
 
