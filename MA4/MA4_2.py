@@ -3,7 +3,8 @@
 from person import *
 import time
 from matplotlib import pyplot as plt
-
+import matplotlib
+import pylab
 
 def main():
 	f = Person(50)
@@ -17,6 +18,7 @@ def main():
 
 	lista_py = []
 	n = [num for num in range(20, 31)]
+	matplotlib.use('Agg')
 
 	for i in n:
 		start = time.perf_counter()
@@ -24,8 +26,8 @@ def main():
 		end = time.perf_counter()
 		tid = (start-end)
 		lista_py.append(tid)
-	plt.plot(n,lista_py)
-	plt.savefig('test')
+	pylab.plot(n,lista_py)
+	pylab.savefig('foo.png')
 
 	#print(f.fib_numba())
 
