@@ -29,14 +29,14 @@ class Person(object):
 		return lib.Person_delete(self.obj)
 	
 	def fib_py(self):
-		n = self.getAge
+		n = self.age
 		if n <= 1:
 			return n
 		else:
 			return(self.fib_py(n-1) + self.fib_py(n-2))
 		
 	def fib_numba(self):
-		n = self.getAge
+		n = self.age
 		if n <= 1:
 			return n
 		else:
