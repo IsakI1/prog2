@@ -27,7 +27,7 @@ def main():
 		tid = (start-end)
 		lista_py.append(tid)
 	pylab.plot(n,lista_py)
-	pylab.savefig('foo.png')
+	pylab.savefig("test")
 
 	#print(f.fib_numba())
 
