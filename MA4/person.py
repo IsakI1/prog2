@@ -1,7 +1,7 @@
 """ Python interface to the C++ Person class """
 import ctypes
 lib = ctypes.cdll.LoadLibrary('./libperson.so')
-from numba import jit, types
+from numba import njit, types
 
 
 class Person(object):
@@ -37,7 +37,7 @@ class Person(object):
 		else:
 			return self.fib_py(n-1) + self.fib_py(n-2)
 		
-	@jit
+	@njit
 	def fib_numba(self, n=None):
 		if n is None:
 			n = self.getAge()
