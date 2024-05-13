@@ -1,7 +1,7 @@
 """ Python interface to the C++ Person class """
 import ctypes
 lib = ctypes.cdll.LoadLibrary('./libperson.so')
-from numba import jit, types
+from numba import njit, types
 
 
 class Person(object):
@@ -37,13 +37,11 @@ class Person(object):
 		else:
 			return self.fib_py(n-1) + self.fib_py(n-2)
 		
-	@jit
+	@staticmethod
+	@njit(types.int64(types.int64))
 	def fib_numba(self, n):
 		if n <= 1:
 			return n
 		else:
-			a, b = 0, 1
-			for _ in range(2, n + 1):
-				a, b = b, a + b
-			return b
+			return self.fib_numba(n-1) + self.fib_numba(n-2)
 
