@@ -37,7 +37,7 @@ class Person(object):
 		else:
 			return self.fib_py(n-1) + self.fib_py(n-2)
 		
-	@njit(types.int64(types.int64))
+	@njit
 	def fib_numba(f):
 		n = f.getAge()
 		if n <= 1:
