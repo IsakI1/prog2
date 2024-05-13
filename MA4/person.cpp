@@ -28,6 +28,13 @@ double Person::getDecades(){
 =======
 	return age/10.0;
 }
+int fibonacci(int n) {
+    if (n <= 1)
+        return n;
+    else
+        return fibonacci(n-1) + fibonacci(n-2);
+}
+
 
 >>>>>>> f2a279b5a50bd839bc49f2ca93cb9bb5cf1010d2
 extern "C"{

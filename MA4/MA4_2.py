@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 from person import Person
+from person import fib_py
+
 
 def main():
 	f = Person(50)
