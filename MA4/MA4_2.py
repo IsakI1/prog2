@@ -25,7 +25,7 @@ def main():
 		tid = (start-end)
 		lista_py.append(tid)
 	plt.plot(n,lista_py)
-	plt.savefig()
+	plt.savefig('test')
 
 	#print(f.fib_numba())
 
