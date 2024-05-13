@@ -17,7 +17,7 @@ def main():
 	f.setAge(20)
 
 	lista_py = []
-	n = [num for num in range(20, 31)]
+	n = [num for num in range(20, 40)]
 	matplotlib.use('Agg')
 
 	for i in n:
