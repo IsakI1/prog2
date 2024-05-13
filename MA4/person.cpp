@@ -26,11 +26,11 @@ void Person::setAge(int a){
 double Person::getDecades(){
 	return age/10.0;
 }
-int fibonacci(int n) {
-    if (n <= 1)
-        return n;
+int fibonacci(int age) {
+    if (age <= 1)
+        return age;
     else
-        return fibonacci(n-1) + fibonacci(n-2);
+        return fibonacci(age-1) + fibonacci(age-2);
 }
 
 
