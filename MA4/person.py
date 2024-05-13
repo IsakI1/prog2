@@ -28,16 +28,21 @@ class Person(object):
 	def __del__(self):
 		return lib.Person_delete(self.obj)
 	
-	def fib_py(self):
-		n = self.getAge()
+	
+	def fib_py(self, n=None):
+		if n is None:
+			n = self.getAge()
 		if n <= 1:
 			return n
 		else:
-			return(self.fib_py(n-1) + self.fib_py(n-2))
+			return self.fib_py(n-1) + self.fib_py(n-2)
 		
-	def fib_numba(self):
-		n = self.getAge()
+
+	@jit
+	def fib_py(self, n=None):
+		if n is None:
+			n = self.getAge()
 		if n <= 1:
 			return n
 		else:
-			return self.fib_numba(n-1) + self.fib_numba(n-2)
+			return self.fib_py(n-1) + self.fib_py(n-2)
