@@ -25,7 +25,7 @@ def main():
 		f.setAge(i)
 		print(f.fib_py())
 		end = time.perf_counter()
-		tid = (start-end)
+		tid = (end-start)
 		lista_py.append(tid)
 	pylab.plot(n,lista_py)
 	pylab.savefig("test")
