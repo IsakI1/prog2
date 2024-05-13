@@ -10,28 +10,20 @@ class Person{
 	private:
 		int age;
 	};
- 
 Person::Person(int a){
 	age = a;
 	}
- 
 int Person::getAge(){
 	return age;
 	}
- 
+
 void Person::setAge(int a){
 	age = a;
 	}
 
 double Person::getDecades(){
-<<<<<<< HEAD
-	return double(age/10.0);
-=======
 	return double(age)/10.0;
 	}
->>>>>>> e4152029c31dd5ff32592e3334c7fa7578d1f037
-
-
 extern "C"{
 	Person* Person_new(int a) {return new Person(a);}
 	int Person_getAge(Person* person) {return person->getAge();}
