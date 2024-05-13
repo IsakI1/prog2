@@ -44,4 +44,8 @@ class Person(object):
 		if n <= 1:
 			return n
 		else:
+<<<<<<< HEAD
+			return self.fib_py(n-1) + self.fib_py(n-2)"""
+=======
 			return self.fib_py(n-1) + self.fib_py(n-2)
+>>>>>>> 72f31fd34855701cb1e28adbf01da82b8b396a24
