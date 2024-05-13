@@ -13,7 +13,7 @@ def main():
 	print(f.getDecades())
 	f.setAge(20)
 	print(f.fib_py())
-	print(f.fib_numba())
+	#print(f.fib_numba())
 
 if __name__ == '__main__':
 	main()
