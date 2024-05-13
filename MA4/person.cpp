@@ -23,8 +23,13 @@ void Person::setAge(int a){
 	age = a;
 	}
 
+<<<<<<< HEAD
 double Person::getDecades(){
 	return static_cast<double>(age) / 10.0;
+=======
+int Person::getDecades(){
+	return double(age/10.0);
+>>>>>>> 703f420fe1c9965d17af69c72175da6ecf04f9b5
 	}
 
 
