@@ -17,7 +17,8 @@ def main():
 	f.setAge(20)
 
 	lista_py = []
-	n = [num for num in range(20, 40)]
+	lista_numba = []
+	n = [num for num in range(20, 30)]
 	matplotlib.use('Agg')
 
 	for i in n:
@@ -27,7 +28,18 @@ def main():
 		end = time.perf_counter()
 		tid = (end-start)
 		lista_py.append(tid)
+
+	for i in n:
+		start = time.perf_counter()
+		f.setAge(i)
+		print(f.fib_numba())
+		end = time.perf_counter()
+		tid = (end-start)
+		lista_numba.append(tid)
+
+
 	pylab.plot(n,lista_py)
+	pylab.plot(n,lista_numba)
 	pylab.savefig("test")
 
 	#print(f.fib_numba())

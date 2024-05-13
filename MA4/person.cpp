@@ -22,21 +22,8 @@ void Person::setAge(int a){
 	}
 
 double Person::getDecades(){
-<<<<<<< HEAD
 	return double(age)/10.0;
 	}
-=======
-	return age/10.0;
-}
-int fibonacci(int age) {
-    if (age <= 1)
-        return age;
-    else
-        return fibonacci(age-1) + fibonacci(age-2);
-}
-
-
->>>>>>> f2a279b5a50bd839bc49f2ca93cb9bb5cf1010d2
 extern "C"{
 	Person* Person_new(int a) {return new Person(a);}
 	int Person_getAge(Person* person) {return person->getAge();}
