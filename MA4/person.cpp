@@ -24,13 +24,8 @@ void Person::setAge(int a){
 	}
 
 double Person::getDecades(){
-<<<<<<< HEAD
-	return double(age/10.0);
-=======
-	return double(age)/10.0;
-	}
->>>>>>> e4152029c31dd5ff32592e3334c7fa7578d1f037
-
+	return age/10.0;
+}
 
 extern "C"{
 	Person* Person_new(int a) {return new Person(a);}
