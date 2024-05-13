@@ -39,9 +39,9 @@ class Person(object):
 		
 	@staticmethod
 	@njit(types.int64(types.int64))
-	def fib_numba(n):
+	def fib_numba(f,n):
 		if n <= 1:
 			return n
 		else:
-			return Person.fib_numba(n-1) + Person.fib_numba(n-2)
+			return f.fib_numba(n-1) + f.fib_numba(n-2)
 
