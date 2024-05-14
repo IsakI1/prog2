@@ -28,6 +28,8 @@ class Person(object):
 	def __del__(self):
 		return lib.Person_delete(self.obj)
 	
+	def fib_cpp(self, n):
+		return lib.Person_fib_cpp(self.obj, n)
 	
 	def fib_py(self, n=None):
 		if n is None:
@@ -36,11 +38,11 @@ class Person(object):
 			return n
 		else:
 			return self.fib_py(n-1) + self.fib_py(n-2)
-		
+'''
 	@njit(types.int64(types.pyobject, types.int64))
 	def fib_numba(self,n):
 		if n <= 1:
 			return n
 		else:
-			return self.fib_numba(n-1) + self.fib_numba(n-2)
+			return self.fib_numba(n-1) + self.fib_numba(n-2)'''		
 

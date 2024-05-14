@@ -24,6 +24,15 @@ void Person::setAge(int a){
 double Person::getDecades(){
 	return double(age)/10.0;
 	}
+
+int Person::fib_cpp(int n) {
+    if (n <= 1) {
+        return n;
+    } else {
+        return fib_cpp(n-1) + fib_cpp(n-2);
+    }
+}
+	
 extern "C"{
 	Person* Person_new(int a) {return new Person(a);}
 	int Person_getAge(Person* person) {return person->getAge();}
