@@ -8,7 +8,7 @@ class Person{
 		void setAge(int);
 		double getDecades();
 		int fib_cpp();
-		int fib_cpp_helper(int)
+		int fib_cpp_helper(int);
 	private:
 		int age;
 		int n;
@@ -29,7 +29,7 @@ double Person::getDecades(){
 	}
 
 int Person::fib_cpp() {
-	n = getAge()
+	n = getAge();
     if (n <= 1) {
         return n;
     } else {
