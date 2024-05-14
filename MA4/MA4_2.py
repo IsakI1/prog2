@@ -43,7 +43,7 @@ def main():
 	for i in n:
 		start = time.perf_counter()
 		f.setAge(i)
-		print(f.fib_numba())
+		print(fib_numba(f))
 		end = time.perf_counter()
 		tid = (end-start)
 		lista_numba.append(tid)

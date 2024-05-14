@@ -3,7 +3,6 @@ import ctypes
 lib = ctypes.cdll.LoadLibrary('./libperson.so')
 from numba import njit, types
 
-
 class Person(object):
 	def __init__(self, age):
 		lib.Person_new.argtypes = [ctypes.c_int]
@@ -43,16 +42,13 @@ class Person(object):
 			return self.fib_py(n-1) + self.fib_py(n-2)
 
 	
-	def fib_numba(self):
-		n = self.getAge()
-		return self.fib_numba_helper(n)
 			
-	@njit
-	def fib_numba_helper(self: object, n: int) -> int:
-		if n is None:
-			n = self.getAge()
-		if n <= 1:
-			return n
-		else:
-			return self.fib_numba(n-1) + self.fib_numba(n-2)
+@njit
+def fib_numba(self, person: Person) -> int:
+	if n is None:
+		n = person.getAge()
+	if n <= 1:
+		return n
+	else:
+		return person.fib_numba(n-1) + person.fib_numba(n-2)
 
