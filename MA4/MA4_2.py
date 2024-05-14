@@ -55,8 +55,8 @@ def main():
 	print('n = 47 för c++ tid: ',tid)
 	"""
 
-	pylab.plot(n,lista_py)
-	pylab.plot(n,lista_numba)
+	#pylab.plot(n,lista_py)
+	#pylab.plot(n,lista_numba)
 	pylab.plot(n,lista_cpp)
 	pylab.savefig("test")
 
