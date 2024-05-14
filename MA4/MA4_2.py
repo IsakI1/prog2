@@ -18,7 +18,7 @@ def main():
 
 	lista_py = []
 	lista_numba = []
-	n = [num for num in range(20, 40)]
+	n = [num for num in range(20, 30)]
 	matplotlib.use('Agg')
 
 	for i in n:
@@ -36,7 +36,11 @@ def main():
 		end = time.perf_counter()
 		tid = (end-start)
 		lista_numba.append(tid)
-
+	
+	start = time.perf_counter()
+	f.fib_cpp(47)
+	end = time.perf_counter()
+	print('n = 47 för c++ tid: ',tid = (end-start))
 
 	pylab.plot(n,lista_py)
 	pylab.plot(n,lista_numba)
