@@ -7,7 +7,7 @@ class Person{
 		int getAge();
 		void setAge(int);
 		double getDecades();
-		int fib_cpp(int)
+		int fib_cpp(int);
 	private:
 		int age;
 	};
