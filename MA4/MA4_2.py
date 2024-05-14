@@ -18,7 +18,7 @@ def main():
 
 	lista_py = []
 	lista_numba = []
-	n = [num for num in range(20, 30)]
+	n = [num for num in range(20, 40)]
 	matplotlib.use('Agg')
 
 	for i in n:
