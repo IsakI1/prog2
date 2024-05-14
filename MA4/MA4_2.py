@@ -30,7 +30,7 @@ def main():
 		end = time.perf_counter()
 		tid = (end-start)
 		lista_py.append(tid)
-	"""
+	
 	for i in n:
 		start = time.perf_counter()
 		f.setAge(i)
@@ -38,8 +38,8 @@ def main():
 		end = time.perf_counter()
 		tid = (end-start)
 		lista_cpp.append(tid)
-	"""
 	
+	"""
 	for i in n:
 		start = time.perf_counter()
 		f.setAge(i)
@@ -47,7 +47,7 @@ def main():
 		end = time.perf_counter()
 		tid = (end-start)
 		lista_numba.append(tid)
-	
+	"""
 	start = time.perf_counter()
 	f.fib_cpp(47)
 	end = time.perf_counter()
