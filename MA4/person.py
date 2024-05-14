@@ -17,7 +17,8 @@ class Person(object):
 		self.obj = lib.Person_new(age)
 		lib.Person_fib_cpp.argtypes = [ctypes.c_void_p]
 		lib.Person_fib_cpp.restype = ctypes.c_int
-
+		lib.Person_fib_cpp_helper.argtypes = [ctypes.c_void_p, ctypes.c_int]
+		lib.Person_fib_cpp_helper.restype = ctypes.c_int
 	def getAge(self):
 		return lib.Person_getAge(self.obj)
 
