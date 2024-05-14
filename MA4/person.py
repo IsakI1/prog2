@@ -44,7 +44,7 @@ class Person(object):
 	
 			
 @njit
-def fib_numba(person: Person) -> int:
+def fib_numba(person: object) -> int:
 	n = person.getAge()
 	return fib_numba_helper(n)
 
