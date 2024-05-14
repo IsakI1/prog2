@@ -31,7 +31,6 @@ def main():
 		tid = (end-start)
 		lista_py.append(tid)
 	"""
-	"""
 	for i in n:
 		start = time.perf_counter()
 		f.setAge(i)
@@ -40,6 +39,7 @@ def main():
 		tid = (end-start)
 		lista_cpp.append(tid)
 	"""
+	
 	for i in n:
 		start = time.perf_counter()
 		f.setAge(i)
@@ -47,7 +47,7 @@ def main():
 		end = time.perf_counter()
 		tid = (end-start)
 		lista_numba.append(tid)
-	"""
+	
 	start = time.perf_counter()
 	f.fib_cpp(47)
 	end = time.perf_counter()
@@ -56,9 +56,9 @@ def main():
 	"""
 
 	#pylab.plot(n,lista_py)
-	pylab.plot(n,lista_numba)
+	#pylab.plot(n,lista_numba)
 	#pylab.plot(n,lista_cpp)
-	pylab.savefig("test")
+	#pylab.savefig("test")
 
 	#print(f.fib_numba())
 

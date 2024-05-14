@@ -30,12 +30,9 @@ double Person::getDecades(){
 
 int Person::fib_cpp() {
 	n = getAge();
-    if (n <= 1) {
-        return n;
-    } else {
-        return fib_cpp_helper(n-1) + fib_cpp_helper(n-2);
-    }
+	return fib_cpp_helper(n);
 }
+
 int Person::fib_cpp_helper(int n) {
     if (n <= 1) {
         return n;
