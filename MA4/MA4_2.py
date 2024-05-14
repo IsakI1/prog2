@@ -22,7 +22,7 @@ def main():
 	n = [num for num in range(20, 30)]
 	matplotlib.use('Agg')
 	
-	"""
+
 	for i in n:
 		start = time.perf_counter()
 		f.setAge(i)
@@ -39,7 +39,7 @@ def main():
 		tid = (end-start)
 		lista_cpp.append(tid)
 	
-	"""
+
 	for i in n:
 		start = time.perf_counter()
 		f.setAge(i)
@@ -47,20 +47,19 @@ def main():
 		end = time.perf_counter()
 		tid = (end-start)
 		lista_numba.append(tid)
-	"""
+
 	start = time.perf_counter()
-	f.fib_cpp(47)
+	f.setAge(47)
+	print(f.fib_cpp())
 	end = time.perf_counter()
-	tid = end-star
+	tid = end-start
 	print('n = 47 för c++ tid: ',tid)
-	"""
 
-	#pylab.plot(n,lista_py)
-	#pylab.plot(n,lista_numba)
-	#pylab.plot(n,lista_cpp)
-	#pylab.savefig("test")
 
-	#print(f.fib_numba())
+	pylab.plot(n,lista_py)
+	pylab.plot(n,lista_numba)
+	pylab.plot(n,lista_cpp)
+	pylab.savefig("test")
 
 if __name__ == '__main__':
 	main()
