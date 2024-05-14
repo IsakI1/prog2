@@ -48,7 +48,7 @@ class Person(object):
 		return self.fib_numba_helper(n)
 			
 	@njit
-	def fib_numba_helper(self, n: int) -> int:
+	def fib_numba_helper(self: object, n: int) -> int:
 		if n is None:
 			n = self.getAge()
 		if n <= 1:
