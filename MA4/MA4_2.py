@@ -40,7 +40,8 @@ def main():
 	start = time.perf_counter()
 	f.fib_cpp(47)
 	end = time.perf_counter()
-	print('n = 47 för c++ tid: ',tid = (end-start))
+	tid = end-start
+	print('n = 47 för c++ tid: ',tid)
 
 	pylab.plot(n,lista_py)
 	pylab.plot(n,lista_numba)
